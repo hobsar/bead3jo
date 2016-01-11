@@ -19,8 +19,8 @@
 ![Használati esetmodell](docs/images/haszneset.png)
 ![Folyamatok](docs/images/folyamatok.png)
 
-### Szekvencia-diagramm
-![Szekvencia-diagramm](docs/images/szekv.png)
+### Szekvencia-diagram
+![Szekvencia-diagram](docs/images/szekv.png)
 
 ## Tervezés
 
