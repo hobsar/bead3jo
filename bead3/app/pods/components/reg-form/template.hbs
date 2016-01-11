@@ -1,0 +1,35 @@
+{{#each errorMessages}}
+<div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+    <h1>Regisztráció</h1>
+</div>
+
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group {{if users.name "has-error"}}">
+            <label for="name" class="col-lg-2 control-label">Név</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="name" name="name" type="text" value="{{data.name}}">
+            </div>
+            <span class="help-block">{{users.name}}</span>
+        </div>
+        <div class="form-group {{if users.pw "has-error"}}">
+            <label for="pw" class="col-lg-2 control-label">Jelszó</label>
+            <div class="col-lg-10">
+                <input class="form-control" type="password" id="pw" name="pw">
+            </div>
+            <span class="help-block">{{users.pw}}</span>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button {{action "reg"}} class="btn btn-primary">Regisztráció</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

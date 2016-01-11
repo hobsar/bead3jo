@@ -1,0 +1,16 @@
+{{#each messages}}
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+    <h1>Recept</h1>
+</div>
+
+{{recept-list receptek=model}}
+
+<p>
+    <button {{action "showModal" "new-recept-modal" "receptek.list"}} class="btn btn-default">Új Recept felvitele</button>
+</p>

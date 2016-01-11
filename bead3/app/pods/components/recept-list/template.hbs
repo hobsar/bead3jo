@@ -1,0 +1,27 @@
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>Étel neve</th>
+            <th>Státusz</th>
+            <th>Kategória</th>
+            <th>Recept</th>
+            <th>Funkciók</th>
+        </tr>   
+    </thead>
+    <tbody>
+
+        {{#each receptek}}
+        <tr>
+            <td>{{knev}}</td>
+            <td><span class="">{{status}}</span></td>
+            <td>{{kategoria}}</td>
+            <td><span class="badge">{{numberOfMessages}}</span> {{description}}</td>
+            <td>
+                {{link-to "Megtekint" "receptek.view" this class="btn btn-default btn-sm"}}
+                {{link-to "Szerkeszt" "receptek.edit" this class="btn btn-default btn-sm"}}
+                <button {{action "deleteRecept" this}} class="btn btn-default btn-sm">Töröl</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
